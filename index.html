@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="task-1">
+        <h2>Задача №1</h2>
+        <h3>Напишите регулярное выражение для поиска всех слов, начинающихся с определенной буквы.</h3>
+        <h4>Text:</h4><span class="task-1-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis architecto iste non qui sunt quos, aliquam neque. Ipsa, odit autem.</span>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string1 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, autem.';
+    let a = prompt('Введите букву для поиска');
+    let res1 = new RegExp(`\\b${a}\\w{1,}\\b`, 'gi');
+    alert(string1.match(res1));
+    
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-1-btn">Поиск</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-2">
+        <h2>Задача №2</h2>
+        <h3>Создайте функцию, которая проверяет, является ли строка датой в формате "дд-мм-гг" с использованием регулярных выражений.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string2 = prompt('Введите строку');
+    if(string2.match(/^(0?[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\d\d)$/)) {
+        alert('Эта строка дата в формате "дд-мм-гг"');
+    } else &lbrace;
+        alert('Эта строка НЕ в формате "дд-мм-гг"');
+    &rcub;
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-2-btn">старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-3">
+        <h2>Задача №3</h2>
+        <h3>Напишите регулярное выражение для поиска всех слов, содержащих только русские буквы.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string3 = prompt('Введите строку');
+    alert(string3.match(/(?<=\s|^)[а-я]+(?=\s|$)/gi));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-3-btn">старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-4">
+        <h2>Задача №4</h2>
+        <h3>Создайте функцию, которая проверяет, содержит ли строка только цифры с использованием регулярных выражений.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string4 = prompt('Введите строку');
+    if(string4.match(/\D/)) {
+        alert('Эта строка содержит НЕ только цифры');
+    } else {
+        alert('Эта строка содержит только цифры');
+        
+    }
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-4-btn">старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-5">
+        <h2>Задача №5</h2>
+        <h3>Создайте функцию, которая проверяет, является ли строка палиндромом с использованием регулярных выражений.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = prompt('Введите слово'),
+        string2 = string.replaceAll(' ', '')
+    let regexp = /[a-zа-я]/iy, start, end, success = true;
+
+    for(let i = 0; i < string2.length; i++) {
+        regexp.lastIndex = i;
+        start = regexp.exec(string2);
+        regexp.lastIndex = string2.length - 1 - i;
+        end = regexp.exec(string2)
+        if(start[0].toLocaleUpperCase() != end[0].toLocaleUpperCase()) success = false;
+    }
+    success ? alert('Это полендром') : alert('Это НЕ полендром');
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-5-btn">старт</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
