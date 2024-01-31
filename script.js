@@ -47,3 +47,16 @@ document.querySelector('.task-5-btn').addEventListener('click', () => {
     }
     success ? alert('Это полендром') : alert('Это НЕ полендром');
 });
+
+//task-6
+document.querySelector('.task-6-btn').addEventListener('click', () => {
+    const string = document.querySelector('.task-6-text').textContent;
+    const a = prompt('Введите букву для поиска');
+    alert(string.match(new RegExp(`\\b\\w{1,}${a}\\b`, 'gi')));
+});
+
+//task-7
+document.querySelector('.task-7-btn').addEventListener('click', () => {
+    const string = prompt('Введите строку');
+    string.match(/[a-zа-я]/g) ? alert('Здесь есть нижний регистр') : alert('Здесь только верхний регистр');
+});

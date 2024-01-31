@@ -109,6 +109,41 @@
             </div>
         </div>
     </div>
+
+    <div class="task-6">
+        <h2>Задача №6</h2>
+        <h3>Напишите регулярное выражение для поиска всех слов, оканчивающихся на определенную букву.</h3>
+        <h4>Text:</h4><span class="task-6-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis architecto iste non qui sunt quos, aliquam neque. Ipsa, odit autem.</span>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = document.querySelector('.task-6-text').textContent;
+    const a = prompt('Введите букву для поиска');
+    alert(string.match(new RegExp(`\\b\\w{1,}${a}\\b`, 'gi')));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-6-btn">старт</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-7">
+        <h2>Задача №7</h2>
+        <h3>Создайте функцию, которая проверяет, содержит ли строка только буквы верхнего регистра с использованием регулярных выражений.</h3>
+        <div class="task-body">
+    <pre>
+    <code>
+    const string = document.querySelector('.task-6-text').textContent;
+    const a = prompt('Введите букву для поиска');
+    alert(string.match(new RegExp(`\\b\\w{1,}${a}\\b`, 'gi')));
+    </code>
+    </pre>
+            <div class="task-data">
+                <button class="task-7-btn">старт</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
